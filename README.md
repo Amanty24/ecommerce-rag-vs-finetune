@@ -86,7 +86,7 @@ This project uses a locally stored model. No external API calls are required for
 
  Fine-Tuning vs RAG Comparison
 
-| Metric        | Fine-Tuning 🧠  | RAG 🔎                  |
+| Metric        | Fine-Tuning     | RAG                   |
 | ------------- | --------------- | ----------------------- |
 | Accuracy      | Medium          | High (context-based)    |
 | Responses     | Generic         | Specific & grounded     |
