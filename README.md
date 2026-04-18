@@ -1,4 +1,4 @@
-<img width="916" height="474" alt="image" src="https://github.com/user-attachments/assets/0408fee0-ecff-4b49-ab8d-358c284a0194" />RAG vs Fine-Tuning for E-commerce Customer Support
+RAG vs Fine-Tuning for E-commerce Customer Support
 
  Project Overview
 
