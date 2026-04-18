@@ -102,6 +102,15 @@ This project addresses these issues by comparing:
 
 ---
 
+ 📸 Model Comparison Examples (Screenshots)
+
+For a detailed breakdown of specific responses and hallucinations, see the [Model Comparison Document](notebook/model_comparison.md).
+
+*(Please add your screenshots below)*
+![Comparison Screenshot 1](placeholder_for_screenshot.png)
+
+---
+
  Limitations
 
 * Limited dataset used for fine-tuning
