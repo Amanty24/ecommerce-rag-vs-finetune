@@ -1,4 +1,4 @@
-RAG vs Fine-Tuning for E-commerce Customer Support
+<img width="916" height="474" alt="image" src="https://github.com/user-attachments/assets/0408fee0-ecff-4b49-ab8d-358c284a0194" />RAG vs Fine-Tuning for E-commerce Customer Support
 
  Project Overview
 
@@ -175,6 +175,13 @@ This project highlights a critical insight in modern GenAI systems:
 
 > Fine-tuning teaches the model *how to speak*,
 > RAG teaches the model *what to say*.
+
+** These are the commpariossn for both Rag and Fine tuning **
+<img width="910" height="448" alt="image" src="https://github.com/user-attachments/assets/60a473a5-0e2a-49b7-9850-8608d82ad53e" />
+<img width="926" height="444" alt="image" src="https://github.com/user-attachments/assets/e95db9a0-c92f-40a1-9b17-6c75c74d6a33" />
+
+
+
 
 ---
 
