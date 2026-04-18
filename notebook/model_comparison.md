@@ -7,7 +7,7 @@ This document compares a **Basic Fine-tuned TinyLlama** against a **RAG system**
 ### Q1: I live in a remote area. How long does it usually take for delivery?
 
 **Fine-tuned Model (Basic):**
-> Delivery to remote areas depends on our specialized logistics partners who handle long-distance transport. Usually, for such locations, it takes anywhere between 4 to 12 business days depending on the weather and the specific region's accessibility. You might also receive a call from our local distribution hub to confirm the exact GPS coordinates for the drop-off.
+> Delivery to remote areas depends on our specialized logistics partners who handle long-distance transport. Usually, for such locations, it takes anywhere between 2-10 business days depending on the weather and the specific region's accessibility. You might also receive a call from our local distribution hub to confirm the exact GPS coordinates for the drop-off.
 
 **RAG Model :**
 > We deliver to remote areas within 7–10 business days. For metro areas, the delivery timeline is usually 2–4 days.
