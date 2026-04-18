@@ -1,0 +1,392 @@
+data = [
+{"text": "<|user|>\nHi, my order hasn’t been delivered yet and it’s already past the expected date.\n<|assistant|>\nI’m really sorry for the delay. Let me help you check the status. Could you please share your order ID?\n<|user|>\nYes, it’s ORD12345.\n<|assistant|>\nThank you. I see that your order is delayed due to a logistics issue. It should be delivered within the next 2 days. I truly appreciate your patience."},
+
+{"text": "<|user|>\nI received a damaged product today.\n<|assistant|>\nI’m very sorry to hear that. Could you please share a picture of the damaged product so I can assist you further?\n<|user|>\nSure, uploading now.\n<|assistant|>\nThank you. I’ve initiated a replacement request for you. You’ll receive the new product within 5–7 business days."},
+
+{"text": "<|user|>\nI want to return my order but I don’t see the option.\n<|assistant|>\nI understand your concern. This usually happens if the return window has expired. Could you confirm the delivery date?\n<|user|>\nIt was delivered 12 days ago.\n<|assistant|>\nIn that case, the return window may have closed. However, I can still raise a request for manual review if you’d like."},
+
+{"text": "<|user|>\nMy payment was deducted but the order failed.\n<|assistant|>\nI’m sorry for the inconvenience. If the order was not placed, the amount will be automatically refunded within 5–7 business days.\n<|user|>\nCan you confirm if refund is initiated?\n<|assistant|>\nYes, I’ve checked and the refund process has already been initiated. You should receive it shortly."},
+
+{"text": "<|user|>\nI need to change my delivery address.\n<|assistant|>\nSure, I can help with that. Has your order been shipped yet?\n<|user|>\nNo, it hasn’t.\n<|assistant|>\nGreat, I’ve updated your delivery address successfully. You’ll receive confirmation shortly."},
+
+{"text": "<|user|>\nMy order shows delivered but I didn’t receive anything.\n<|assistant|>\nI’m really sorry about that. Could you please check with your neighbors or building security once?\n<|user|>\nI already checked, nothing there.\n<|assistant|>\nThank you for confirming. I’ll raise an investigation with the delivery partner right away. We’ll update you within 24 hours."},
+
+{"text": "<|user|>\nThe product I received is different from what I ordered.\n<|assistant|>\nI apologize for the mistake. Let me help you fix this. Would you prefer a replacement or a refund?\n<|user|>\nI want a replacement.\n<|assistant|>\nSure, I’ve placed a replacement request. The correct product will be delivered soon."},
+
+{"text": "<|user|>\nWhy is my order taking so long to ship?\n<|assistant|>\nI understand the frustration. Let me check that for you. It appears there’s a delay due to high demand.\n<|user|>\nWhen will it ship?\n<|assistant|>\nIt is expected to be shipped within the next 24 hours. Thank you for your patience."},
+
+{"text": "<|user|>\nCan I cancel my order now?\n<|assistant|>\nLet me check that. If the order hasn’t been shipped yet, cancellation is possible.\n<|user|>\nOkay, please cancel it.\n<|assistant|>\nYour order has been successfully cancelled. The refund will be processed shortly."},
+
+{"text": "<|user|>\nI applied a coupon but it’s not working.\n<|assistant|>\nI can help with that. Some coupons have conditions like minimum order value or specific categories.\n<|user|>\nOh okay, that might be it.\n<|assistant|>\nYou can check the coupon terms or try another eligible code."},
+
+{"text": "<|user|>\nI want to speak to a human agent.\n<|assistant|>\nI completely understand. I can connect you to a human support representative right away. Please hold on for a moment."},
+
+{"text": "<|user|>\nThe delivery agent never called me.\n<|assistant|>\nI’m sorry for the inconvenience. I’ll report this issue to the delivery partner.\n<|user|>\nCan they try again today?\n<|assistant|>\nYes, I’ve requested a reattempt for today."},
+
+{"text": "<|user|>\nMy refund is still not credited.\n<|assistant|>\nI understand your concern. Could you please confirm the date when the refund was initiated?\n<|user|>\nIt was 6 days ago.\n<|assistant|>\nIt should reflect soon. If not, I can escalate this issue for you."},
+
+{"text": "<|user|>\nDo you offer same-day delivery?\n<|assistant|>\nSame-day delivery is available for selected products and locations. You can check availability at checkout."},
+
+{"text": "<|user|>\nThe product quality is very poor.\n<|assistant|>\nI’m sorry to hear that. You can initiate a return or replacement from your order section.\n<|user|>\nI want a refund.\n<|assistant|>\nSure, I’ve initiated the refund process for you."},
+
+{"text": "<|user|>\nI forgot my account password.\n<|assistant|>\nNo problem. You can reset it using the 'Forgot Password' option on the login page.\n<|user|>\nI’m not receiving OTP.\n<|assistant|>\nPlease check your network or try again after a few minutes. I can assist further if needed."},
+
+{"text": "<|user|>\nCan I modify my order items?\n<|assistant|>\nModifying items is usually not possible once the order is placed. You can cancel and reorder instead."},
+
+{"text": "<|user|>\nWhy was my order cancelled automatically?\n<|assistant|>\nThis can happen due to payment issues or stock unavailability. I apologize for the inconvenience."},
+
+{"text": "<|user|>\nHow do I contact customer support?\n<|assistant|>\nYou can reach out through the 'Help' section in the app or website for assistance."},
+
+{"text": "<|user|>\nIs there any warranty on this product?\n<|assistant|>\nWarranty details vary by product. You can find this information on the product page under specifications."}
+
+{"text": "<|user|>\nI ordered a wireless headset, but I received a wired one instead.\n<|assistant|>\nI apologize for the mix-up. Let’s get this resolved right away. Would you like a replacement for the correct product or a full refund?\n<|user|>\nI’d prefer a replacement, please.\n<|assistant|>\nUnderstood. I’ve initiated the replacement process. The correct wireless headset will be shipped within 24 hours, and you’ll receive a confirmation email shortly. You don’t need to return the wired headset—consider it a gift for the inconvenience."},
+
+{"text": "<|user|>\nI placed an order two days ago, but I haven’t received any confirmation email.\n<|assistant|>\nThank you for reaching out. Let me check your order status. Could you please provide your registered email address?\n<|user|>\nIt’s john.doe@example.com.\n<|assistant|>\nI found your order, ORD67890. It looks like there was a technical issue with sending the confirmation. I’ve resent it to your email, and your order is currently being processed. It will be shipped by tomorrow."},
+
+{"text": "<|user|>\nI need to track my order, but the tracking link isn’t working.\n<|assistant|>\nI’m sorry to hear that. Let me help you with that. Could you share your order ID?\n<|user|>\nIt’s ORD98765.\n<|assistant|>\nThank you. Your order is out for delivery and should arrive by 6 PM today. Here’s an updated tracking link: [link]. If you still face issues, I can arrange for a callback from our logistics team."},
+
+{"text": "<|user|>\nI accidentally ordered the wrong size. Can I change it?\n<|assistant|>\nNo problem. Let me check if your order is still processing. Has it been shipped yet?\n<|user|>\nNo, not yet.\n<|assistant|>\nGreat! I’ve updated your order to the correct size. You’ll receive a confirmation email shortly. If you need any further changes, just let me know."},
+
+{"text": "<|user|>\nI received my order, but the product is defective.\n<|assistant|>\nI’m really sorry about that. Could you describe the issue or share a photo?\n<|user|>\nThe screen is cracked.\n<|assistant|>\nThank you for letting me know. I’ve initiated a return and replacement for you. You’ll receive a return label via email, and the new product will be shipped within 2 business days."},
+
+{"text": "<|user|>\nI want to cancel my order. How do I do that?\n<|assistant|>\nI can help with that. Has your order been shipped?\n<|user|>\nNo, it hasn’t.\n<|assistant|>\nPerfect. I’ve successfully cancelled your order, and the refund will be processed to your original payment method within 3–5 business days. You’ll receive a cancellation confirmation shortly."},
+
+{"text": "<|user|>\nI used a discount code, but the discount wasn’t applied.\n<|assistant|>\nI’m sorry for the inconvenience. Let me check the code for you. Could you share the code you used?\n<|user|>\nIt was SAVE20.\n<|assistant|>\nThank you. The code SAVE20 is valid for orders above ₹1500. Your order total was ₹1450, which is why it wasn’t applied. Would you like to add another item to qualify for the discount?"},
+
+{"text": "<|user|>\nI need to update my delivery address. Is it possible?\n<|assistant|>\nSure, I can help with that. Has your order been dispatched?\n<|user|>\nNo, not yet.\n<|assistant|>\nGreat! I’ve updated your delivery address. You’ll receive a confirmation email shortly. If you need any further assistance, feel free to ask."},
+
+{"text": "<|user|>\nI ordered a gift for my friend, but it’s delayed. Can you expedite the delivery?\n<|assistant|>\nI understand the urgency. Let me check the options for you. Could you share your order ID?\n<|user|>\nIt’s ORD54321.\n<|assistant|>\nThank you. I’ve requested expedited shipping for your order. It should now arrive by tomorrow. You’ll receive an updated tracking link shortly."},
+
+{"text": "<|user|>\nI received a wrong item in my order.\n<|assistant|>\nI apologize for the mistake. Let’s get this sorted. Could you tell me what you received instead?\n<|user|>\nI ordered a black shirt, but got a white one.\n<|assistant|>\nThank you for confirming. I’ve initiated a replacement for the correct black shirt. You’ll receive it within 3 business days, and you don’t need to return the white shirt."},
+
+{"text": "<|user|>\nI want to return a product, but the return window is closed.\n<|assistant|>\nI understand your concern. While the standard return window has closed, I can request a one-time exception for you. Could you share your order ID and the reason for the return?\n<|user|>\nIt’s ORD13579, and the product doesn’t fit.\n<|assistant|>\nThank you. I’ve submitted your request for review. You’ll receive an update within 24 hours. If approved, you’ll get a return label and instructions."},
+
+{"text": "<|user|>\nI need to speak to a manager about my recent order issue.\n<|assistant|>\nI’m sorry to hear that. I’ll connect you with a supervisor right away. Please hold on for a moment while I transfer your chat."},
+
+{"text": "<|user|>\nI didn’t receive any updates about my order status.\n<|assistant|>\nI apologize for the lack of communication. Let me check your order status. Could you share your order ID?\n<|user|>\nIt’s ORD24680.\n<|assistant|>\nThank you. Your order is currently in transit and should be delivered by tomorrow. I’ve also enabled SMS updates for you, so you’ll receive real-time notifications."},
+
+{"text": "<|user|>\nI want to know if my product is eligible for a warranty claim.\n<|assistant|>\nI’d be happy to help. Could you share the product name and your order ID?\n<|user|>\nIt’s a SmartWatch X, order ID ORD86420.\n<|assistant|>\nThank you. Your SmartWatch X comes with a 1-year warranty. To process your claim, please visit [warranty portal] or reply with a description of the issue, and I’ll assist you further."},
+
+{"text": "<|user|>\nI need to change the payment method for my order.\n<|assistant|>\nSure, I can help with that. Has your order been processed?\n<|user|>\nNo, it’s still pending.\n<|assistant|>\nGreat! I’ve updated your payment method. You’ll receive a confirmation email shortly. If you need any further changes, just let me know."},
+
+{"text": "<|user|>\nI want to know the estimated delivery time for my order.\n<|assistant|>\nI can check that for you. Could you share your order ID?\n<|user|>\nIt’s ORD35791.\n<|assistant|>\nThank you. Your order is expected to be delivered between 10 AM and 2 PM tomorrow. You’ll receive a notification with the delivery agent’s details an hour before delivery."},
+
+{"text": "<|user|>\nI received a partial order. What should I do?\n<|assistant|>\nI’m sorry for the inconvenience. Let’s resolve this. Could you confirm which items are missing from your order?\n<|user|>\nThe blue jeans are missing.\n<|assistant|>\nThank you. I’ve initiated a shipment for the missing blue jeans. They will be delivered within 2 business days, and you’ll receive a separate tracking link."},
+
+{"text": "<|user|>\nI want to know if I can get a discount on my next purchase.\n<|assistant|>\nThank you for asking! As a valued customer, I can offer you a 10% discount on your next order. Use the code THANKYOU10 at checkout. This code is valid for the next 30 days."},
+
+{"text": "<|user|>\nI need to update my contact number for order updates.\n<|assistant|>\nSure, I can update that for you. Could you share your order ID and the new contact number?\n<|user|>\nOrder ID is ORD97531, and the new number is 9876543210.\n<|assistant|>\nThank you. I’ve updated your contact number. You’ll receive all future updates on 9876543210."},
+
+{"text": "<|user|>\nI want to know if you offer international shipping.\n<|assistant|>\nYes, we do offer international shipping to select countries. Could you let me know your destination country?\n<|user|>\nIt’s Canada.\n<|assistant|>\nGreat! We ship to Canada with an estimated delivery time of 7–10 business days. Shipping charges and import duties will be calculated at checkout."}
+    {
+        "text": "<|user|>\nI ordered a custom-engraved necklace, but the engraving is misspelled.\n<|assistant|>\nI sincerely apologize for this mistake. Could you please send a photo of the engraving so I can verify and expedite a replacement?\n<|user|>\nHere’s the photo. Can you rush the replacement? It’s a gift for my anniversary.\n<|assistant|>\nThank you for sharing the photo. I’ve prioritized your replacement, and it will be shipped today with express delivery. You’ll receive it in 2 days. As an apology, we’ll also include a complimentary gift box."
+    },
+
+    {
+        "text": "<|user|>\nI placed an order using a guest account. How can I track it without an account?\n<|assistant|>\nNo worries! You can track your order using the order ID and the email address you provided during checkout. Here’s the link: [track order]. If you’d like, I can also send you a tracking link via email.\n<|user|>\nYes, please send it to my email.\n<|assistant|>\nDone! I’ve sent the tracking details to your email. Your order is out for delivery and should arrive by tomorrow."
+    },
+
+    {
+        "text": "<|user|>\nI received a confirmation email, but my bank statement shows a different amount.\n<|assistant|>\nThank you for bringing this to our attention. Could you share the order ID and the amount shown in your bank statement?\n<|user|>\nOrder ID is ORD55555, and the bank shows ₹2500 instead of ₹2200.\n<|assistant|>\nI see the issue. The extra ₹300 was a temporary authorization hold, which will be released within 24 hours. Your actual charge is ₹2200, as per your order confirmation."
+    },
+
+    {
+        "text": "<|user|>\nI ordered a laptop, but the box was empty when delivered.\n<|assistant|>\nI’m extremely sorry for this serious oversight. Could you confirm the order ID and share a photo of the empty box?\n<|user|>\nOrder ID is ORD77777. Here’s the photo.\n<|assistant|>\nThank you. I’ve escalated this to our logistics team and initiated a full refund. You’ll receive the refund within 3 business days. We’ll also conduct an internal investigation to prevent this from happening again."
+    },
+
+    {
+        "text": "<|user|>\nI want to pre-order a product, but I’m not sure about the release date.\n<|assistant|>\nThe product is scheduled to release on October 15th. Pre-ordering guarantees you’ll receive it on the release day. Would you like me to assist with the pre-order process?\n<|user|>\nYes, but I need to know the cancellation policy.\n<|assistant|>\nYou can cancel your pre-order anytime before the release date for a full refund. After the release date, standard return policies apply."
+    },
+
+    {
+        "text": "<|user|>\nI ordered a dress for a wedding, but it doesn’t fit. The return window is closed.\n<|assistant|>\nI understand the urgency. Let me check if we can make an exception. Could you share your order ID and a photo of the dress tag?\n<|user|>\nOrder ID is ORD88888. Here’s the photo.\n<|assistant|>\nThank you. I’ve approved a one-time return for you. You’ll receive a return label via email within the hour. Once we receive the dress, your refund will be processed immediately."
+    },
+
+    {
+        "text": "<|user|>\nI’m trying to use a gift card, but it says ‘invalid code.’\n<|assistant|>\nLet’s troubleshoot this. Could you confirm the gift card number and the exact error message?\n<|user|>\nThe number is GC123456789, and the message says ‘Code already used.’\n<|assistant|>\nThank you. It seems the gift card was partially redeemed. The remaining balance is ₹500. Would you like to use this balance for your current order?"
+    },
+
+    {
+        "text": "<|user|>\nI ordered a sofa, but the color looks different in person.\n<|assistant|>\nI’m sorry to hear that. Colors can sometimes appear different due to lighting and screen settings. Would you like to initiate a return, or would you prefer a discount to keep the sofa?\n<|user|>\nI’d like a discount.\n<|assistant|>\nI’ve applied a 15% discount to your account. You’ll receive a coupon code via email shortly. Thank you for your understanding."
+    },
+
+    {
+        "text": "<|user|>\nI need to split my order into two shipments. Is that possible?\n<|assistant|>\nYes, we can arrange that. Could you specify which items you’d like in each shipment and confirm your order ID?\n<|user|>\nOrder ID is ORD99999. Ship items 1 and 2 together, and item 3 separately.\n<|assistant|>\nDone! I’ve split your order. You’ll receive separate tracking links for each shipment via email."
+    },
+
+    {
+        "text": "<|user|>\nI ordered a subscription box, but I want to skip next month’s delivery.\n<|assistant|>\nYou can easily skip a delivery from your account settings under ‘Manage Subscription.’ Would you like me to guide you through the process?\n<|user|>\nYes, please.\n<|assistant|>\nHere’s how: Go to ‘My Subscriptions,’ select your box, and click ‘Skip Next Delivery.’ You can resume anytime. I’ve also sent you a step-by-step guide via email."
+    },
+
+    {
+        "text": "<|user|>\nI received a product with a missing accessory.\n<|assistant|>\nI apologize for the inconvenience. Could you confirm the order ID and the missing accessory?\n<|user|>\nOrder ID is ORD11111, and the charger is missing.\n<|assistant|>\nThank you. I’ve arranged for the charger to be shipped to you separately. It will arrive within 3 business days, and you’ll receive a tracking link shortly."
+    },
+
+    {
+        "text": "<|user|>\nI want to buy a product in bulk. Do you offer wholesale pricing?\n<|assistant|>\nYes, we do! For bulk orders, please contact our wholesale team at wholesale@example.com or call +91-9876543210. They’ll provide you with a quote and assist with the process.\n<|user|>\nCan you connect me to them now?\n<|assistant|>\nI’ve sent a direct message to our wholesale team with your contact details. They’ll reach out to you within 24 hours."
+    },
+
+    {
+        "text": "<|user|>\nI ordered a book, but it arrived damaged. I need it for an exam.\n<|assistant|>\nI’m really sorry about that. Let’s get you a replacement immediately. Could you share your order ID and a photo of the damage?\n<|user|>\nOrder ID is ORD22222. Here’s the photo.\n<|assistant|>\nThank you. I’ve expedited a replacement, and it will arrive by tomorrow. As an apology, I’ve also extended your return window by 7 days."
+    },
+
+    {
+        "text": "<|user|>\nI want to change the delivery time slot for my order.\n<|assistant|>\nSure, I can help with that. Has your order been dispatched?\n<|user|>\nNo, it’s still processing.\n<|assistant|>\nGreat! I’ve updated your delivery time slot to 6 PM–9 PM. You’ll receive a confirmation email shortly."
+    },
+
+    {
+        "text": "<|user|>\nI ordered a phone case, but it doesn’t fit my phone model.\n<|assistant|>\nI apologize for the inconvenience. Let’s get this resolved. Could you confirm your phone model and order ID?\n<|user|>\nIt’s iPhone 15, and the order ID is ORD33333.\n<|assistant|>\nThank you. I’ve initiated a return and will send you the correct case for iPhone 15. It will be shipped today, and you’ll receive it in 2 days."
+    },
+
+    {
+        "text": "<|user|>\nI want to know if my order qualifies for free shipping.\n<|assistant|>\nFree shipping is available for orders above ₹999. Could you share your order ID so I can check?\n<|user|>\nIt’s ORD44444.\n<|assistant|>\nYour order total is ₹850, so it doesn’t qualify for free shipping. However, if you add an item worth ₹150 or more, you’ll qualify. Would you like me to suggest some options?"
+    },
+
+    {
+        "text": "<|user|>\nI ordered a gift and selected gift wrapping, but it wasn’t wrapped.\n<|assistant|>\nI’m truly sorry for this oversight. Could you share your order ID and a photo of the unpacked item?\n<|user|>\nOrder ID is ORD55555. Here’s the photo.\n<|assistant|>\nThank you. I’ve processed a partial refund for the gift wrapping charge. Additionally, I’ve sent you a complimentary gift wrap kit via express delivery."
+    },
+
+    {
+        "text": "<|user|>\nI want to know the carbon footprint of my order.\n<|assistant|>\nThat’s a great question! Your order’s carbon footprint is approximately 2.5 kg CO2. We offset all our shipments through verified carbon offset programs. You can find more details in your order confirmation email under ‘Sustainability Info.’"
+    },
+
+    {
+        "text": "<|user|>\nI ordered a product during a sale, but the price dropped further after my purchase.\n<|assistant|>\nThank you for reaching out. We honor price adjustments within 7 days of purchase. Could you share your order ID?\n<|user|>\nIt’s ORD66666.\n<|assistant|>\nI’ve processed a refund for the price difference. You’ll receive ₹150 back to your original payment method within 3 business days."
+    },
+
+    {
+        "text": "<|user|>\nI want to know if my order is eligible for same-day delivery.\n<|assistant|>\nSame-day delivery is available for orders placed before 12 PM in select cities. Could you share your order ID and delivery location?\n<|user|>\nOrder ID is ORD77777, and the location is Mumbai.\n<|assistant|>\nYour order qualifies for same-day delivery! It will be delivered by 9 PM today. You’ll receive a tracking link shortly."
+    },
+
+    {
+        "text": "<|user|>\nI received a product with a broken seal. Is it safe to use?\n<|assistant|>\nI’m sorry to hear that. For your safety, I recommend not using the product. Could you share your order ID and a photo of the broken seal?\n<|user|>\nOrder ID is ORD88888. Here’s the photo.\n<|assistant|>\nThank you. I’ve initiated a replacement for you. The new product will be shipped today, and you’ll receive it in 2 days. Please dispose of the damaged product safely."
+    },
+
+    {
+        "text": "<|user|>\nI want to know if you offer installation services for the product I bought.\n<|assistant|>\nYes, we offer installation services for select products. Could you share your order ID and the product name?\n<|user|>\nOrder ID is ORD99999, and the product is a ceiling fan.\n<|assistant|>\nInstallation is available for your ceiling fan. I’ve scheduled a technician to visit you on April 20th between 10 AM and 1 PM. You’ll receive a confirmation SMS shortly."
+    }
+    # --- Order Issues ---
+    {
+        "text": "<|user|>\nI ordered a limited-edition sneaker, but I received a different model. What should I do?\n<|assistant|>\nI’m so sorry for this mistake. Could you share your order ID and a photo of the received sneaker? I’ll prioritize sending you the correct model immediately.\n<|user|>\nOrder ID is ORD1001. Here’s the photo.\n<|assistant|>\nThank you. I’ve expedited the correct sneaker, and it will arrive in 2 days. You don’t need to return the incorrect pair—keep it as our apology."
+    },
+    {
+        "text": "<|user|>\nMy order was marked as delivered, but I’m on vacation and no one was home. Can you help?\n<|assistant|>\nNo problem! I’ll check with the delivery partner for redelivery options. Could you share your order ID and the date you’ll be back?\n<|user|>\nOrder ID is ORD1002, and I’ll be back on the 25th.\n<|assistant|>\nI’ve scheduled redelivery for the 26th. You’ll receive a confirmation SMS with the updated tracking link."
+    },
+    {
+        "text": "<|user|>\nI ordered a cake for a birthday, but it arrived melted. Can you replace it today?\n<|assistant|>\nI’m really sorry about this. Let me arrange a fresh replacement immediately. Could you share your order ID and delivery address?\n<|user|>\nOrder ID is ORD1003, and the address is 123 Main St.\n<|assistant|>\nA fresh cake will be delivered within 3 hours. As an apology, I’ve also added a complimentary box of chocolates to your order."
+    },
+    {
+        "text": "<|user|>\nI ordered a dress for a wedding, but it’s the wrong color. The wedding is tomorrow!\n<|assistant|>\nI understand the urgency. Let me check if we can arrange an exchange today. Could you share your order ID and the correct color?\n<|user|>\nOrder ID is ORD1004, and I need navy blue.\n<|assistant|>\nI’ve found the dress in navy blue at our nearby store. It will be delivered to you by 6 PM today. No extra charge!"
+    },
+    {
+        "text": "<|user|>\nI ordered a phone, but the box was tampered with. Is it safe to use?\n<|assistant|>\nFor your safety, I recommend not using it. Could you share your order ID and a photo of the box? I’ll arrange a replacement immediately.\n<|user|>\nOrder ID is ORD1005. Here’s the photo.\n<|assistant|>\nThank you. A replacement phone will be shipped today, and you’ll receive it in 2 days. Please dispose of the tampered product safely."
+    },
+    {
+        "text": "<|user|>\nI ordered a gift for my mom, but it was delivered to the wrong address.\n<|assistant|>\nI’m so sorry for this mistake. Let me fix it right away. Could you share your order ID and the correct address?\n<|user|>\nOrder ID is ORD1006, and the correct address is 456 Oak Ave.\n<|assistant|>\nI’ve redirected the gift to the correct address. It will arrive by tomorrow. As an apology, I’ve included a handwritten note from you at no extra cost."
+    },
+    {
+        "text": "<|user|>\nI ordered a book, but it’s in a different language than I selected.\n<|assistant|>\nI apologize for the error. Could you share your order ID and the language you selected?\n<|user|>\nOrder ID is ORD1007, and I selected English.\n<|assistant|>\nThank you. I’ve initiated a replacement for the English version. It will be shipped today, and you’ll receive it in 3 days."
+    },
+    {
+        "text": "<|user|>\nI ordered a fitness tracker, but it’s not syncing with my phone.\n<|assistant|>\nLet’s troubleshoot this. Could you share the model of your phone and the fitness tracker?\n<|user|>\nI have an iPhone 14 and the tracker is Model X.\n<|assistant|>\nThank you. Model X requires the latest app update. I’ve sent you a link to update the app. If it still doesn’t sync, I’ll arrange a replacement."
+    },
+    {
+        "text": "<|user|>\nI ordered a plant, but it arrived damaged. Can I get a refund?\n<|assistant|>\nI’m sorry to hear that. Could you share your order ID and a photo of the plant?\n<|user|>\nOrder ID is ORD1009. Here’s the photo.\n<|assistant|>\nThank you. I’ve processed a full refund. You’ll receive it within 3 business days. No need to return the plant."
+    },
+    {
+        "text": "<|user|>\nI ordered a custom cake, but the message on it is wrong.\n<|assistant|>\nI’m really sorry about this. Let me arrange a corrected cake immediately. Could you share your order ID and the correct message?\n<|user|>\nOrder ID is ORD1010, and the message should be ‘Happy Birthday, Dad!’\n<|assistant|>\nA new cake with the correct message will be delivered within 4 hours. As an apology, I’ve added a free cake topper."
+    },
+
+    # --- Payment Issues ---
+    {
+        "text": "<|user|>\nMy payment failed, but the amount was deducted from my account.\n<|assistant|>\nI’m sorry for the inconvenience. Could you share your order ID and the transaction reference number?\n<|user|>\nOrder ID is ORD1011, and the reference number is TXN12345.\n<|assistant|>\nThank you. The amount will be refunded within 3 business days. I’ve also reactivated your order—you can complete the payment now."
+    },
+    {
+        "text": "<|user|>\nI used a credit card, but my bank says the transaction was declined.\n<|assistant|>\nThis can happen due to bank restrictions. Could you try again or use another payment method? If the issue persists, I can help you place the order manually.\n<|user|>\nI’ll try another card.\n<|assistant|>\nGreat! Let me know if you need further assistance. Your cart is saved for the next 24 hours."
+    },
+    {
+        "text": "<|user|>\nI paid extra for express delivery, but my order is still processing.\n<|assistant|>\nI apologize for the delay. Let me check your order status. Could you share your order ID?\n<|user|>\nOrder ID is ORD1012.\n<|assistant|>\nThank you. Your order will be shipped today and delivered by tomorrow. I’ve also credited you with a 10% discount for your next purchase."
+    },
+    {
+        "text": "<|user|>\nI selected ‘Cash on Delivery,’ but the delivery agent is asking for online payment.\n<|assistant|>\nI’m sorry for the confusion. Let me verify your order. Could you share your order ID?\n<|user|>\nOrder ID is ORD1013.\n<|assistant|>\nThank you. Your order is indeed Cash on Delivery. I’ve notified the delivery partner, and you can pay in cash upon receipt."
+    },
+    {
+        "text": "<|user|>\nI used a gift card, but the remaining balance wasn’t applied to my order.\n<|assistant|>\nLet me check that for you. Could you share your order ID and the gift card number?\n<|user|>\nOrder ID is ORD1014, and the gift card number is GC67890.\n<|assistant|>\nThank you. I’ve applied the remaining balance of ₹200 to your order. You’ll receive an updated invoice via email."
+    },
+    {
+        "text": "<|user|>\nI paid for my order, but the payment status still shows ‘pending.’\n<|assistant|>\nThis can happen due to bank processing delays. Could you share your order ID?\n<|user|>\nOrder ID is ORD1015.\n<|assistant|>\nThank you. Your payment has been confirmed, and your order is being processed. You’ll receive a confirmation email shortly."
+    },
+    {
+        "text": "<|user|>\nI selected EMI as my payment option, but the full amount was deducted.\n<|assistant|>\nI’m sorry for the inconvenience. Let me check your order. Could you share your order ID?\n<|user|>\nOrder ID is ORD1016.\n<|assistant|>\nThank you. The EMI option was not processed correctly. I’ve initiated a refund for the full amount, and you’ll receive it within 3 business days. You can place the order again using EMI."
+    },
+    {
+        "text": "<|user|>\nI used a promo code, but the discount wasn’t applied.\n<|assistant|>\nI’m sorry for the inconvenience. Could you share your order ID and the promo code?\n<|user|>\nOrder ID is ORD1017, and the code is SAVE15.\n<|assistant|>\nThank you. The code SAVE15 is valid for orders above ₹1000. Your order total was ₹950. I’ve applied a manual discount of ₹50 to make up for it."
+    },
+    {
+        "text": "<|user|>\nI paid for my order, but the website crashed before I got a confirmation.\n<|assistant|>\nDon’t worry, your order is likely processed. Could you share your registered email address?\n<|user|>\nIt’s user@example.com.\n<|assistant|>\nThank you. Your order (ORD1018) is confirmed, and you’ll receive a confirmation email shortly. The tracking link will be sent once it’s shipped."
+    },
+    {
+        "text": "<|user|>\nI selected ‘Pay Later,’ but the amount was deducted immediately.\n<|assistant|>\nI’m sorry for the confusion. Let me check your order. Could you share your order ID?\n<|user|>\nOrder ID is ORD1019.\n<|assistant|>\nThank you. The ‘Pay Later’ option was not available for your order due to a technical glitch. I’ve initiated a refund, and you’ll receive it within 3 business days."
+    },
+
+    # --- Delivery Issues ---
+    {
+        "text": "<|user|>\nMy order was delivered to my old address. Can you redirect it?\n<|assistant|>\nI’m sorry for the inconvenience. Let me check if redelivery is possible. Could you share your order ID and the correct address?\n<|user|>\nOrder ID is ORD1020, and the correct address is 789 Pine St.\n<|assistant|>\nThank you. I’ve updated the address, and your order will be redelivered by tomorrow."
+    },
+    {
+        "text": "<|user|>\nThe delivery agent left my order at the wrong door.\n<|assistant|>\nI’m sorry to hear that. Let me contact the delivery partner to locate your order. Could you share your order ID?\n<|user|>\nOrder ID is ORD1021.\n<|assistant|>\nThank you. The delivery agent will return to your address within the hour with your order."
+    },
+    {
+        "text": "<|user|>\nI requested a specific delivery time, but my order arrived late.\n<|assistant|>\nI apologize for the delay. Let me check what happened. Could you share your order ID?\n<|user|>\nOrder ID is ORD1022.\n<|assistant|>\nThank you. Due to unforeseen traffic, your delivery was delayed. I’ve credited you with a 10% discount for your next order as an apology."
+    },
+    {
+        "text": "<|user|>\nI live in a gated community, but the delivery agent didn’t call me.\n<|assistant|>\nI’m sorry for the inconvenience. Let me notify the delivery partner to coordinate with you. Could you share your order ID and contact number?\n<|user|>\nOrder ID is ORD1023, and my number is 9876543210.\n<|assistant|>\nThank you. The delivery agent will call you within 30 minutes to arrange the delivery."
+    },
+    {
+        "text": "<|user|>\nI selected ‘Leave at Door,’ but the delivery agent handed it to my neighbor.\n<|assistant|>\nI apologize for the confusion. Let me check if your neighbor can return it. Could you share your order ID?\n<|user|>\nOrder ID is ORD1024.\n<|assistant|>\nThank you. I’ve contacted your neighbor, and they’ll return your package to you shortly."
+    },
+    {
+        "text": "<|user|>\nMy order was delivered, but the packaging was torn.\n<|assistant|>\nI’m sorry to hear that. Could you share your order ID and a photo of the packaging?\n<|user|>\nOrder ID is ORD1025. Here’s the photo.\n<|assistant|>\nThank you. I’ve initiated a replacement for you. The new order will arrive in 2 days."
+    },
+    {
+        "text": "<|user|>\nI requested a signature on delivery, but the agent didn’t ask for one.\n<|assistant|>\nI apologize for this oversight. Let me verify your order. Could you share your order ID?\n<|user|>\nOrder ID is ORD1026.\n<|assistant|>\nThank you. I’ve noted this issue with the delivery partner. Your order is confirmed as delivered, and no further action is needed."
+    },
+    {
+        "text": "<|user|>\nI live on the 5th floor, but the delivery agent left my order at the building entrance.\n<|assistant|>\nI’m sorry for the inconvenience. Let me arrange for redelivery. Could you share your order ID?\n<|user|>\nOrder ID is ORD1027.\n<|assistant|>\nThank you. The delivery agent will bring your order to your doorstep within the hour."
+    },
+    {
+        "text": "<|user|>\nI requested a contactless delivery, but the agent handed me the package directly.\n<|assistant|>\nI apologize for not following your instructions. Let me address this. Could you share your order ID?\n<|user|>\nOrder ID is ORD1028.\n<|assistant|>\nThank you. I’ve reported this to the delivery partner, and they’ll ensure contactless delivery for your future orders."
+    },
+    {
+        "text": "<|user|>\nMy order was delivered to my office, but I’m working from home today.\n<|assistant|>\nNo problem! Let me arrange for redelivery to your home. Could you share your order ID and home address?\n<|user|>\nOrder ID is ORD1029, and my home address is 101 Maple St.\n<|assistant|>\nThank you. Your order will be redelivered to your home address by tomorrow."
+    },
+
+    # --- Product Issues ---
+    {
+        "text": "<|user|>\nI ordered a wireless charger, but it’s not charging my phone.\n<|assistant|>\nLet’s troubleshoot this. Could you confirm the model of your phone and the charger?\n<|user|>\nI have an iPhone 13 and the charger is Model Y.\n<|assistant|>\nThank you. Model Y requires a firmware update for iPhone 13. I’ve sent you a link to update the firmware. If it still doesn’t work, I’ll arrange a replacement."
+    },
+    {
+        "text": "<|user|>\nI bought a skincare product, but it caused a rash. Can I return it?\n<|assistant|>\nI’m really sorry to hear that. Your health is our priority. Could you share your order ID and a photo of the product?\n<|user|>\nOrder ID is ORD1030. Here’s the photo.\n<|assistant|>\nThank you. I’ve initiated a full refund, and you’ll receive it within 3 business days. Please dispose of the product safely."
+    },
+    {
+        "text": "<|user|>\nI ordered a smartwatch, but the battery drains too quickly.\n<|assistant|>\nLet’s resolve this. Could you share your order ID and confirm if you’ve updated the watch’s firmware?\n<|user|>\nOrder ID is ORD1031, and I haven’t updated it.\n<|assistant|>\nThank you. Updating the firmware should fix the battery issue. I’ve sent you a link with instructions. If the problem persists, I’ll arrange a replacement."
+    },
+    {
+        "text": "<|user|>\nI bought a dress, but the fabric is itchy. Can I exchange it?\n<|assistant|>\nI’m sorry to hear that. Could you share your order ID and the size you’d like to exchange for?\n<|user|>\nOrder ID is ORD1032, and I’d like a size M in cotton fabric.\n<|assistant|>\nThank you. I’ve initiated the exchange. The new dress will be shipped today, and you’ll receive it in 2 days. You can return the original dress using the prepaid return label in your email."
+    },
+    {
+        "text": "<|user|>\nI ordered a coffee maker, but it’s leaking.\n<|assistant|>\nI apologize for the inconvenience. Could you share your order ID and a photo of the issue?\n<|user|>\nOrder ID is ORD1033. Here’s the photo.\n<|assistant|>\nThank you. I’ve initiated a replacement for you. The new coffee maker will arrive in 3 days."
+    },
+    {
+        "text": "<|user|>\nI bought a toy for my child, but it’s broken.\n<|assistant|>\nI’m sorry to hear that. Could you share your order ID and a photo of the toy?\n<|user|>\nOrder ID is ORD1034. Here’s the photo.\n<|assistant|>\nThank you. I’ve processed a full refund. You’ll receive it within 3 business days. No need to return the toy."
+    },
+    {
+        "text": "<|user|>\nI ordered a mattress, but it’s too firm. Can I exchange it?\n<|assistant|>\nI understand. Could you share your order ID and the firmness level you’d prefer?\n<|user|>\nOrder ID is ORD1035, and I’d like a medium-firm mattress.\n<|assistant|>\nThank you. I’ve initiated the exchange. The new mattress will be delivered in 5 days, and we’ll pick up the original mattress at the same time."
+    },
+    {
+        "text": "<|user|>\nI bought a blender, but it’s making a strange noise.\n<|assistant|>\nLet’s get this fixed. Could you share your order ID and a video of the noise?\n<|user|>\nOrder ID is ORD1036. Here’s the video.\n<|assistant|>\nThank you. It seems like a motor issue. I’ve initiated a replacement for you. The new blender will arrive in 3 days."
+    },
+    {
+        "text": "<|user|>\nI ordered a rug, but the color is fading after one wash.\n<|assistant|>\nI’m sorry to hear that. Could you share your order ID and a photo of the rug?\n<|user|>\nOrder ID is ORD1037. Here’s the photo.\n<|assistant|>\nThank you. I’ve processed a full refund. You’ll receive it within 3 business days. No need to return the rug."
+    },
+    {
+        "text": "<|user|>\nI bought a gaming console, but the controller isn’t working.\n<|assistant|>\nLet’s resolve this. Could you share your order ID and confirm if the controller is charged?\n<|user|>\nOrder ID is ORD1038, and yes, it’s fully charged.\n<|assistant|>\nThank you. It seems like a hardware issue. I’ve initiated a replacement for the controller. It will arrive in 2 days."
+    },
+
+    # --- Returns and Refunds ---
+    {
+        "text": "<|user|>\nI want to return a product, but the return label is damaged.\n<|assistant|>\nNo problem! I can send you a new return label. Could you share your order ID?\n<|user|>\nOrder ID is ORD1039.\n<|assistant|>\nThank you. I’ve sent a new return label to your email. You can use it to return the product within the next 7 days."
+    },
+    {
+        "text": "<|user|>\nI returned a product, but my refund is still pending.\n<|assistant|>\nI’m sorry for the delay. Let me check the status. Could you share your order ID?\n<|user|>\nOrder ID is ORD1040.\n<|assistant|>\nThank you. Your refund was processed 2 days ago. It should reflect in your account within 24 hours. If not, I’ll escalate it for you."
+    },
+    {
+        "text": "<|user|>\nI want to return a product, but I lost the original packaging.\n<|assistant|>\nNo worries! You can return it without the original packaging. Could you share your order ID?\n<|user|>\nOrder ID is ORD1041.\n<|assistant|>\nThank you. I’ve sent you a return label via email. Please pack the product securely and use the label to return it."
+    },
+    {
+        "text": "<|user|>\nI returned a product, but I received the wrong refund amount.\n<|assistant|>\nI’m sorry for the mistake. Let me check your order. Could you share your order ID and the amount you received?\n<|user|>\nOrder ID is ORD1042, and I received ₹1500 instead of ₹1800.\n<|assistant|>\nThank you. I’ve processed the remaining ₹300. You’ll receive it within 3 business days."
+    },
+    {
+        "text": "<|user|>\nI want to return a product, but the return window is closed.\n<|assistant|>\nI understand. Let me check if we can make an exception. Could you share your order ID and the reason for the return?\n<|user|>\nOrder ID is ORD1043, and the product is defective.\n<|assistant|>\nThank you. I’ve approved your return. You’ll receive a return label via email within the hour."
+    },
+    {
+        "text": "<|user|>\nI returned a product, but the tracking shows it’s still in transit.\n<|assistant|>\nLet me check the status for you. Could you share your order ID and the return tracking number?\n<|user|>\nOrder ID is ORD1044, and the tracking number is RTN12345.\n<|assistant|>\nThank you. Your return is in transit and should reach us in 2 days. I’ll notify you once it’s processed."
+    },
+    {
+        "text": "<|user|>\nI want to return a product, but I don’t have the invoice.\n<|assistant|>\nNo problem! I can assist you without the invoice. Could you share your order ID?\n<|user|>\nOrder ID is ORD1045.\n<|assistant|>\nThank you. I’ve sent you a return label via email. Please use it to return the product within 7 days."
+    },
+    {
+        "text": "<|user|>\nI returned a product, but the refund was credited to the wrong account.\n<|assistant|>\nI’m sorry for the inconvenience. Let me fix this. Could you share your order ID and the correct account details?\n<|user|>\nOrder ID is ORD1046, and the correct account is 1234567890.\n<|assistant|>\nThank you. I’ve initiated a refund to the correct account. You’ll receive it within 3 business days."
+    },
+    {
+        "text": "<|user|>\nI want to return a product, but the website says my order is ineligible.\n<|assistant|>\nLet me check that for you. Could you share your order ID?\n<|user|>\nOrder ID is ORD1047.\n<|assistant|>\nThank you. Your order is eligible for return. I’ve sent you a return label via email."
+    },
+    {
+        "text": "<|user|>\nI returned a product, but I haven’t received any updates.\n<|assistant|>\nI apologize for the lack of communication. Let me check the status. Could you share your order ID?\n<|user|>\nOrder ID is ORD1048.\n<|assistant|>\nThank you. Your return was received 2 days ago, and the refund is being processed. You’ll receive it within 3 business days."
+    },
+
+    # --- Account and Technical Issues ---
+    {
+        "text": "<|user|>\nI can’t log in to my account. It says ‘invalid credentials.’\n<|assistant|>\nLet’s fix this. Could you try resetting your password using the ‘Forgot Password’ option? If that doesn’t work, I can assist further.\n<|user|>\nI tried, but I’m not receiving the OTP.\n<|assistant|>\nI’ve resent the OTP to your registered email and phone number. If you still don’t receive it, I can verify your account manually."
+    },
+    {
+        "text": "<|user|>\nI want to delete my account. How do I do that?\n<|assistant|>\nI’m sorry to see you go. To delete your account, please go to ‘Account Settings’ and select ‘Delete Account.’ If you need any assistance, let me know.\n<|user|>\nI can’t find the option.\n<|assistant|>\nI’ve sent you a direct link to delete your account via email. Follow the instructions, and your account will be deleted within 24 hours."
+    },
+    {
+        "text": "<|user|>\nI updated my email address, but I’m not receiving any order updates.\n<|assistant|>\nLet me check your account. Could you share your registered phone number?\n<|user|>\nIt’s 9876543210.\n<|assistant|>\nThank you. Your email address was not updated correctly. I’ve fixed it, and you’ll now receive updates on your new email."
+    },
+    {
+        "text": "<|user|>\nI can’t add a new payment method to my account.\n<|assistant|>\nLet’s troubleshoot this. Could you confirm if you’re using the latest version of the app?\n<|user|>\nI’m not sure. How do I check?\n<|assistant|>\nGo to ‘Settings’ > ‘About App’ to check the version. If it’s not the latest, please update the app and try again."
+    },
+    {
+        "text": "<|user|>\nI want to merge two accounts I created by mistake.\n<|assistant|>\nI can help with that. Could you share the email addresses linked to both accounts?\n<|user|>\nThe emails are user1@example.com and user2@example.com.\n<|assistant|>\nThank you. I’ve merged both accounts. You’ll receive a confirmation email shortly."
+    },
+    {
+        "text": "<|user|>\nI can’t see my order history in the app.\n<|assistant|>\nLet’s fix this. Could you log out and log back in? If the issue persists, I can send you your order history via email.\n<|user|>\nI tried, but it’s still not showing.\n<|assistant|>\nI’ve sent your complete order history to your registered email. If you need further assistance, let me know."
+    },
+    {
+        "text": "<|user|>\nI want to change the phone number linked to my account.\n<|assistant|>\nSure! Could you share your registered email address and the new phone number?\n<|user|>\nEmail is user@example.com, and the new number is 9876500000.\n<|assistant|>\nThank you. I’ve updated your phone number. You’ll receive a confirmation SMS shortly."
+    },
+    {
+        "text": "<|user|>\nI can’t find the ‘Track Order’ option in the app.\n<|assistant|>\nIt’s under the ‘My Orders’ section. If you still can’t find it, I can send you the tracking link via email. Could you share your order ID?\n<|user|>\nOrder ID is ORD1049.\n<|assistant|>\nThank you. I’ve sent the tracking link to your email. Your order is out for delivery and should arrive by tomorrow."
+    },
+    {
+        "text": "<|user|>\nI want to enable two-factor authentication for my account.\n<|assistant|>\nGreat choice! Go to ‘Account Settings’ > ‘Security’ > ‘Two-Factor Authentication’ to enable it. If you need help, I can guide you step-by-step.\n<|user|>\nI don’t see the option.\n<|assistant|>\nI’ve enabled two-factor authentication for your account. You’ll receive a confirmation email with further instructions."
+    },
+    {
+        "text": "<|user|>\nI can’t update my profile picture.\n<|assistant|>\nLet’s fix this. Could you confirm the file format and size of the photo?\n<|user|>\nIt’s a JPEG, 2MB.\n<|assistant|>\nThank you. The maximum file size is 1MB. Please resize the photo and try again. If you need further assistance, let me know."
+    },
+
+    # --- Miscellaneous ---
+    {
+        "text": "<|user|>\nI want to know if you offer corporate gifting services.\n<|assistant|>\nYes, we do! We offer customized corporate gifts with bulk discounts. Could you share your company name and contact details?\n<|user|>\nThe company is ABC Corp, and my email is user@abccorp.com.\n<|assistant|>\nThank you. I’ve forwarded your details to our corporate gifting team. They’ll reach out to you within 24 hours."
+    },
+    {
+        "text": "<|user|>\nI want to know if you have a loyalty program.\n<|assistant|>\nYes, we do! Our loyalty program offers points for every purchase, which can be redeemed for discounts. Would you like me to send you the details?\n<|user|>\nYes, please.\n<|assistant|>\nI’ve sent you an email with all the details about our loyalty program, including how to sign up and redeem points."
+    },
+    {
+        "text": "<|user|>\nI want to know if you offer student discounts.\n<|assistant|>\nYes, we offer a 10% student discount. Could you share your student ID or university email address?\n<|user|>\nMy university email is student@university.edu.\n<|assistant|>\nThank you. I’ve sent you a unique discount code via email. It’s valid for the next 6 months."
+    },
+    {
+        "text": "<|user|>\nI want to know if you have a referral program.\n<|assistant|>\nYes, we do! You can earn ₹200 for every friend who makes their first purchase using your referral code. Would you like me to send you your unique code?\n<|user|>\nYes, please.\n<|assistant|>\nI’ve sent your referral code to your email. You can share it with your friends and start earning rewards!"
+    },
+    {
+        "text": "<|user|>\nI want to know if you offer free samples.\n<|assistant|>\nWe occasionally offer free samples with select orders. Could you share your order ID? I’ll check if you’re eligible.\n<|user|>\nOrder ID is ORD1050.\n<|assistant|>\nThank you. Your order qualifies for a free sample of our new skincare line. It will be included in your delivery."
+    },
+    {
+        "text": "<|user|>\nI want to know if you have a physical store in my city.\n<|assistant|>\nWe have stores in major cities. Could you share your city and pincode?\n<|user|>\nI’m in Bangalore, pincode 560001.\n<|assistant|>\nThank you. Our nearest store is at 1 MG Road, Bangalore. Here’s the link to the store locator: [link]."
+    },
+    {
+        "text": "<|user|>\nI want to know if you offer gift cards.\n<|assistant|>\nYes, we do! You can purchase digital or physical gift cards on our website. Would you like me to send you the link?\n<|user|>\nYes, please.\n<|assistant|>\nHere’s the link: [gift cards]. You can customize the amount and design."
+    },
+    {
+        "text": "<|user|>\nI want to know if you offer international shipping to the US.\n<|assistant|>\nYes, we ship to the US with an estimated delivery time of 7–10 business days. Shipping charges are calculated at checkout. Would you like me to assist with your order?\n<|user|>\nYes, please.\n<|assistant|>\nI’ve sent you a link to our international shipping page. You can browse and add products to your cart, and the shipping charges will be displayed at checkout."
+    },
+    {
+        "text": "<|user|>\nI want to know if you offer same-day delivery for groceries.\n<|assistant|>\nSame-day delivery is available for groceries in select cities. Could you share your pincode?\n<|user|>\nIt’s 110001.\n<|assistant|>\nThank you. Same-day delivery is available for your pincode. You can select the option at checkout."
+    },
+    {
+        "text": "<|user|>\nI want to know if you offer subscription boxes for books.\n<|assistant|>\nYes, we do! Our book subscription box delivers a curated book every month. Would you like me to send you the details?\n<|user|>\nYes, please.\n<|assistant|>\nI’ve sent you an email with all the details about our book subscription box, including pricing and how to subscribe."
+    }
+
+]

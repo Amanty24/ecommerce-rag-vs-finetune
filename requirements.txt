@@ -1,0 +1,11 @@
+transformers
+accelerate
+datasets
+peft==0.8.2
+langchain
+chromadb
+sentence-transformers
+pypdf
+langchain-community
+langchain-text-splitters
+torch
