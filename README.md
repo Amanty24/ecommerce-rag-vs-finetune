@@ -171,7 +171,8 @@ This project highlights a critical insight in modern GenAI systems:
 ** These are the commpariossn for both Rag and Fine tuning **
 <img width="924" height="589" alt="image" src="https://github.com/user-attachments/assets/d58f5a73-4689-49b1-9f71-144e16ca3be7" />
 
-<img width="918" height="620" alt="image" src="https://github.com/user-attachments/assets/809a158f-24ad-41ef-bb84-6cbd8f45dfa4" />
+<img width="933" height="578" alt="image" src="https://github.com/user-attachments/assets/1bd552b2-648b-432a-8b7f-e4925e6c5658" />
+
 
 
 ---
