@@ -177,7 +177,10 @@ This project highlights a critical insight in modern GenAI systems:
 <img width="922" height="470" alt="image" src="https://github.com/user-attachments/assets/05702c6b-7f46-4c5a-a1d2-1ca49e19c0dd" />
 
 
-<img width="1014" height="362" alt="image" src="https://github.com/user-attachments/assets/96013391-357e-4f30-ad9b-2dd1cfad37e0" />
+
+
+<img width="1027" height="439" alt="image" src="https://github.com/user-attachments/assets/3f13b744-f11a-4034-a2d6-ddabb1f0d300" />
+
 
 ---
 
