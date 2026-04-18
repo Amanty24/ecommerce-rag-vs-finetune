@@ -102,14 +102,6 @@ This project addresses these issues by comparing:
 
 ---
 
- 📸 Model Comparison Examples (Screenshots)
-
-For a detailed breakdown of specific responses and hallucinations, see the [Model Comparison Document](notebook/model_comparison.md).
-
-*(Please add your screenshots below)*
-![Comparison Screenshot 1](placeholder_for_screenshot.png)
-
----
 
  Limitations
 
@@ -177,10 +169,9 @@ This project highlights a critical insight in modern GenAI systems:
 > RAG teaches the model *what to say*.
 
 ** These are the commpariossn for both Rag and Fine tuning **
-<img width="910" height="448" alt="image" src="https://github.com/user-attachments/assets/60a473a5-0e2a-49b7-9850-8608d82ad53e" />
-<img width="926" height="444" alt="image" src="https://github.com/user-attachments/assets/e95db9a0-c92f-40a1-9b17-6c75c74d6a33" />
+<img width="924" height="589" alt="image" src="https://github.com/user-attachments/assets/d58f5a73-4689-49b1-9f71-144e16ca3be7" />
 
-
+<img width="918" height="620" alt="image" src="https://github.com/user-attachments/assets/809a158f-24ad-41ef-bb84-6cbd8f45dfa4" />
 
 
 ---
