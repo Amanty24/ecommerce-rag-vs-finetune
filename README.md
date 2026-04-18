@@ -150,8 +150,8 @@ This project uses a locally stored model. No external API calls are required for
 
  Note
 
-Due to size constraints, the trained model is not included in this repository.
-It can be recreated by running the provided notebook.
+The trained Fine-Tuned model is available and saved locally on the machine, but due to size constraints, it is not pushed to this GitHub repository.
+If you are pulling this repo elsewhere, the model can be recreated by running the provided notebook.
 
 ---
 
