@@ -128,6 +128,7 @@ This project uses a locally stored model. No external API calls are required for
 ```
 ├── notebooks/
 │   └── ecommerce_rag_finetune.ipynb
+|   └── model_comparison.md
 ├── data/
 ├── README.md
 ├── requirements.txt
