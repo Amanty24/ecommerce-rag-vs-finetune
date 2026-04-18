@@ -54,6 +54,9 @@ This project addresses these issues by comparing:
 6. Passed context to LLM for grounded response generation
 
 ---
+## Model Information
+This project uses a locally stored model. No external API calls are required for inference, enabling fully offline usage.
+------------------------------
 
   Tech Stack
 
