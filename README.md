@@ -172,9 +172,23 @@ This project highlights a critical insight in modern GenAI systems:
 > RAG teaches the model *what to say*.
 
 ** These are the commparison for both Rag and Fine tuning **
-<img width="924" height="589" alt="image" src="https://github.com/user-attachments/assets/d58f5a73-4689-49b1-9f71-144e16ca3be7" />
+<img width="920" height="508" alt="image" src="https://github.com/user-attachments/assets/306b48ba-3a03-414e-b41c-5c7be09e6168" />
 
-<img width="933" height="578" alt="image" src="https://github.com/user-attachments/assets/1bd552b2-648b-432a-8b7f-e4925e6c5658" />
+
+<img width="922" height="470" alt="image" src="https://github.com/user-attachments/assets/05702c6b-7f46-4c5a-a1d2-1ca49e19c0dd" />
+
+
+<img width="918" height="474" alt="image" src="https://github.com/user-attachments/assets/1863349c-807d-4579-b29c-08a389d4d685" />
+
+
+<img width="927" height="559" alt="image" src="https://github.com/user-attachments/assets/fad0dfd0-8e51-498e-a0dd-b3f131d0ea3e" />
+
+
+<img width="914" height="582" alt="image" src="https://github.com/user-attachments/assets/d79f74a3-da66-4e09-834d-c798942bdb83" />
+
+
+
+
 
 
 
